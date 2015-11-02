@@ -5,6 +5,8 @@
     "date": {
       "type": "string",
       "format": "date-time" },
+    "prior": {
+      "$ref": "#/definitions/charge" },
     "expenses": {
       "type": "array",
       "items": {
