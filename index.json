@@ -18,6 +18,9 @@
         "required": [ "charge", "for" ] } },
     "from": {
       "$ref": "#/definitions/party" },
+    "note": {
+      "type": "string",
+      "minLength": 1 },
     "number": {
       "type": "string",
       "minLength": 1 },
