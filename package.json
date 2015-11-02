@@ -1,0 +1,8 @@
+{
+  "name": "@kemitchell/bill-schema",
+  "version": "0.0.0",
+  "description": "JSON schema for bills",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "kemitchell/bill-schema",
+  "license": "CC0-1.0"
+}
