@@ -29,9 +29,12 @@
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/project" } },
+    "through": {
+      "type": "string",
+      "format": "date-time" },
     "to": {
       "$ref": "#/definitions/party" } },
-  "required": [ "date", "from", "number", "to" ],
+  "required": [ "date", "from", "number", "through", "to" ],
   "definitions": {
     "charge": {
       "type": "object",
