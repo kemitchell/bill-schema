@@ -5,6 +5,17 @@
     "date": {
       "type": "string",
       "format": "date-time" },
+    "expenses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "charge": {
+            "$ref": "#/definitions/charge" },
+          "for": {
+            "type": "string",
+            "minLength": 1 } },
+        "required": [ "charge", "for" ] } },
     "from": {
       "$ref": "#/definitions/party" },
     "number": {
@@ -17,8 +28,19 @@
         "$ref": "#/definitions/project" } },
     "to": {
       "$ref": "#/definitions/party" } },
-  "required": [ "date", "from", "number", "services", "to" ],
+  "required": [ "date", "from", "number", "to" ],
   "definitions": {
+    "charge": {
+      "type": "object",
+      "properties": {
+        "cents": {
+          "type": "integer",
+          "maximum": 99,
+          "minimum": 0 },
+        "dollars": {
+          "type": "integer",
+          "minimum": 0 } },
+      "required": [ "dollars" ] },
     "entry": {
       "type": "object",
       "properties": {
@@ -35,13 +57,8 @@
     "project": {
       "type": "object",
       "properties": {
-        "cents": {
-          "type": "integer",
-          "maximum": 99,
-          "minimum": 0 },
-        "dollars": {
-          "type": "integer",
-          "minimum": 0 },
+        "charge": {
+          "$ref": "#/definitions/charge" },
         "note": {
           "type": "string",
           "minLength": 1 },
@@ -53,7 +70,7 @@
         "name": {
           "type": "string",
           "minLength": 1 } },
-      "required": [ "dollars", "entries", "name" ] },
+      "required": [ "charge", "entries", "name" ] },
     "party": {
       "type": "object",
       "properties": {
