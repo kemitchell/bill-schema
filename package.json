@@ -4,5 +4,11 @@
   "description": "JSON schema for bills",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/bill-schema",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "tv4": "^1.2.7"
+  }
 }
