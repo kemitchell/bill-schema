@@ -48,7 +48,7 @@
         "dollars": {
           "type": "integer",
           "minimum": 0 } },
-      "required": [ "dollars" ] },
+      "required": [ "cents", "dollars" ] },
     "entry": {
       "type": "object",
       "properties": {
